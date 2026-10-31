@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Yasmin ❤️ | From Ahmed Ehab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f0207;
+            --bg-mid: #280614;
+            --rose-primary: #ff2a6d;
+            --rose-light: #ff85a2;
+            --gold: #ffd166;
+            --cream: #fff5f8;
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 133, 162, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: radial-gradient(circle at top, var(--bg-mid), var(--bg-dark) 85%);
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .en-script {
+            font-family: 'Great Vibes', cursive;
+            direction: ltr;
+        }
+
+        .en-title {
+            font-family: 'Playfair Display', serif;
+            direction: ltr;
+        }
+
+        /* =========================================
+           1. شاشة كلمة السر (112004) بـ CSS فقط
+           ========================================= */
+        .lock-screen {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at center, #2b0716 0%, #090104 100%);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            transition: opacity 0.9s ease, visibility 0.9s ease, transform 0.9s ease;
+        }
+
+        .lock-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 209, 102, 0.35);
+            padding: 3rem 2rem;
+            border-radius: 28px;
+            text-align: center;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(255, 42, 109, 0.25);
+        }
+
+        .lock-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .lock-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.1rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            direction: ltr;
+        }
+
+        .lock-card p {
+            color: #f8c8d8;
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.6;
+        }
+
+        .pass-input {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 50px;
+            border: 2px solid var(--rose-light);
+            background: rgba(0, 0, 0, 0.45);
+            color: #fff;
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+            direction: ltr;
+        }
+
+        .pass-input::placeholder {
+            letter-spacing: 2px;
+            font-size: 0.95rem;
+            color: #cfa0b0;
+        }
+
+        .pass-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px rgba(255, 209, 102, 0.45);
+        }
+
+        .hint-text {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--rose-light);
+        }
+
+        /* فتح الموقع تلقائياً بمجرد كتابة 112004 */
+        .lock-screen:has(.pass-input:valid) {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: scale(1.12);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* =========================================
+           2. القلوب المتطايرة في الخلفية
+           ========================================= */
+        .floating-hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -10%;
+            opacity: 0.45;
+            animation: floatUp linear infinite;
+            filter: drop-shadow(0 0 8px var(--rose-primary));
+        }
+
+        .heart:nth-child(1) { left: 8%; animation-duration: 9s; font-size: 20px; }
+        .heart:nth-child(2) { left: 20%; animation-duration: 13s; animation-delay: 2s; font-size: 28px; }
+        .heart:nth-child(3) { left: 35%; animation-duration: 10s; animation-delay: 4s; font-size: 22px; }
+        .heart:nth-child(4) { left: 50%; animation-duration: 14s; animation-delay: 1s; font-size: 32px; }
+        .heart:nth-child(5) { left: 65%; animation-duration: 11s; animation-delay: 3s; font-size: 20px; }
+        .heart:nth-child(6) { left: 80%; animation-duration: 12s; animation-delay: 5s; font-size: 26px; }
+        .heart:nth-child(7) { left: 92%; animation-duration: 9.5s; animation-delay: 1.5s; font-size: 24px; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg) scale(0.8); opacity: 0; }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.6; }
+            100% { transform: translateY(-115vh) rotate(360deg) scale(1.2); opacity: 0; }
+        }
+
+        /* =========================================
+           3. القسم الرئيسي (Hero) + التورتة الملكية
+           ========================================= */
+        header {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        .badge {
+            background: rgba(255, 42, 109, 0.2);
+            border: 1px solid var(--rose-light);
+            color: var(--gold);
+            padding: 8px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 0 20px rgba(255, 42, 109, 0.35);
+            direction: ltr;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.2rem, 8vw, 6.5rem);
+            background: linear-gradient(45deg, #fff, var(--rose-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+            direction: ltr;
+            filter: drop-shadow(0 5px 15px rgba(255, 42, 109, 0.3));
+        }
+
+        .hero-sub-en {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.05rem, 2.5vw, 1.55rem);
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 1.2rem;
+            direction: ltr;
+        }
+
+        .subtitle-ar {
+            font-size: clamp(1rem, 2.2vw, 1.35rem);
+            color: #fce4ec;
+            max-width: 700px;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem 1.8rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ====== التورتة الملكية الكبيرة والمتحركة (3 أدوار) ====== */
+        .grand-cake-stage {
+            position: relative;
+            width: 320px;
+            height: 310px;
+            margin: 1rem auto 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            animation: cakeFloat 3.5s ease-in-out infinite;
+        }
+
+        @keyframes cakeFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .cake-aura {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(255, 42, 109, 0.45) 0%, rgba(255, 209, 102, 0.15) 50%, transparent 75%);
+            border-radius: 50%;
+            bottom: 20px;
+            z-index: -1;
+            animation: auraPulse 2.5s infinite alternate;
+        }
+
+        @keyframes auraPulse {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            100% { transform: scale(1.15); opacity: 1; }
+        }
+
+        .cake-stand {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            height: 18px;
+            background: linear-gradient(90deg, #b8860b, #ffd700, #fff3b0, #ffd700, #b8860b);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.5);
+            z-index: 5;
+        }
+
+        .tier-1 {
+            position: absolute;
+            bottom: 18px;
+            width: 260px;
+            height: 82px;
+            background: linear-gradient(to right, #d81b60, #ff4081, #f06292, #ff4081, #d81b60);
+            border-radius: 16px 16px 6px 6px;
+            box-shadow: inset 0 -8px 15px rgba(0,0,0,0.3), 0 5px 15px rgba(0,0,0,0.4);
+            overflow: hidden;
+            z-index: 4;
+        }
+
+        .tier-2 {
+            position: absolute;
+            bottom: 100px;
+            width: 200px;
+            height: 74px;
+            background: linear-gradient(to right, #ec407a, #ff80ab, #f8bbd0, #ff80ab, #ec407a);
+            border-radius: 14px 14px 4px 4px;
+            box-shadow: inset 0 -6px 12px rgba(0,0,0,0.25), 0 5px 15px rgba(0,0,0,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+        }
+
+        .cake-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #fff;
+            text-shadow: 0 2px 8px #ad1457, 0 0 12px var(--gold);
+            margin-top: 12px;
+            direction: ltr;
+        }
+
+        .tier-3 {
+            position: absolute;
+            bottom: 174px;
+            width: 140px;
+            height: 62px;
+            background: linear-gradient(to right, #f48fb1, #ffc1e3, #ffffff, #ffc1e3, #f48fb1);
+            border-radius: 12px 12px 4px 4px;
+            box-shadow: inset 0 -5px 10px rgba(0,0,0,0.2), 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+
+        .frosting {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 22px;
+            background: var(--cream);
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .frosting span {
+            display: block;
+            width: 18px;
+            height: 28px;
+            background: var(--cream);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+        }
+
+        .frosting span:nth-child(even) {
+            height: 36px;
+        }
+
+        .pearls {
+            position: absolute;
+            bottom: 4px;
+            left: 8px;
+            right: 8px;
+            height: 10px;
+            background: radial-gradient(circle, var(--gold) 4px, transparent 5px);
+            background-size: 14px 10px;
+        }
+
+        .candles-group {
+            position: absolute;
+            bottom: 236px;
+            display: flex;
+            gap: 24px;
+            z-index: 1;
+        }
+
+        .candle {
+            width: 12px;
+            height: 44px;
+            background: repeating-linear-gradient(45deg, #fff, #fff 5px, var(--rose-primary) 5px, var(--rose-primary) 10px);
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .flame {
+            position: absolute;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 15px;
+            height: 24px;
+            background: radial-gradient(ellipse at bottom, #fff 15%, #ffd166 50%, #ff5722 90%);
+            border-radius: 50% 50% 35% 35%;
+            box-shadow: 0 0 18px #ffd166, 0 0 35px #ff2a6d, 0 0 55px #ff9800;
+            animation: flameDance 0.55s infinite alternate ease-in-out;
+        }
+
+        .candle:nth-child(2) { height: 52px; margin-top: -8px; }
+        .candle:nth-child(2) .flame { animation-delay: 0.2s; }
+        .candle:nth-child(3) .flame { animation-delay: 0.4s; }
+
+        @keyframes flameDance {
+            0% { transform: translateX(-50%) scale(1) rotate(-4deg); }
+            100% { transform: translateX(-50%) scale(1.15, 0.92) rotate(4deg); }
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 1.4rem;
+            animation: twinkle 1.6s infinite alternate;
+        }
+        .sp-1 { top: 20px; left: 15px; animation-delay: 0.1s; }
+        .sp-2 { top: 45px; right: 15px; animation-delay: 0.5s; }
+        .sp-3 { bottom: 130px; left: -5px; animation-delay: 0.9s; }
+        .sp-4 { bottom: 140px; right: -5px; animation-delay: 0.3s; }
+
+        @keyframes twinkle {
+            0% { transform: scale(0.6) rotate(0deg); opacity: 0.3; }
+            100% { transform: scale(1.25) rotate(25deg); opacity: 1; }
+        }
+
+        /* =========================================
+           4. الأقسام (Titles in English)
+           ========================================= */
+        .section {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            direction: ltr;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #f3c6d6;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .music-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 650px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+            text-align: center;
+        }
+
+        .vinyl {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            background: repeating-radial-gradient(#111 0, #111 6px, #282828 7px, #111 8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 28px rgba(255, 42, 109, 0.55);
+            animation: spin 8s linear infinite;
+        }
+
+        .vinyl-center {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rose-primary), var(--gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+
+        audio {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 30px;
+            outline: none;
+        }
+
+        /* =========================================
+           5. حلقة الصور ثلاثية الأبعاد (3D Carousel)
+           ========================================= */
+        .carousel-wrapper {
+            perspective: 1100px;
+            width: 240px;
+            height: 280px;
+            margin: 2rem auto 5rem;
+            position: relative;
+        }
+
+        .carousel-3d {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotate3D 24s infinite linear;
+        }
+
+        .carousel-3d:hover {
+            animation-play-state: paused;
+        }
+
+        .carousel-3d figure {
+            position: absolute;
+            width: 200px;
+            height: 250px;
+            left: 20px;
+            top: 10px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 25px rgba(255, 42, 109, 0.4);
+        }
+
+        .carousel-3d figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-3d figure:nth-child(1) { transform: rotateY(0deg) translateZ(260px); }
+        .carousel-3d figure:nth-child(2) { transform: rotateY(60deg) translateZ(260px); }
+        .carousel-3d figure:nth-child(3) { transform: rotateY(120deg) translateZ(260px); }
+        .carousel-3d figure:nth-child(4) { transform: rotateY(180deg) translateZ(260px); }
+        .carousel-3d figure:nth-child(5) { transform: rotateY(240deg) translateZ(260px); }
+        .carousel-3d figure:nth-child(6) { transform: rotateY(300deg) translateZ(260px); }
+
+        @keyframes rotate3D {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(360deg); }
+        }
+
+        /* =========================================
+           6. معرض الـ 12 صورة (الرسائل بالمصري)
+           ========================================= */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            height: 345px;
+            perspective: 1000px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        /* يعمل بالماوس على اللاب وباللمس على الموبايل */
+        .flip-card:hover .flip-card-inner,
+        .flip-card:focus .flip-card-inner,
+        .flip-card:active .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+        }
+
+        .flip-card-front {
+            background: #fff;
+            padding: 12px 12px 50px 12px;
+            color: #222;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 12px;
+            left: 0;
+            right: 0;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--bg-mid);
+            font-size: 1rem;
+            direction: ltr;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(135deg, #2b0938, #c9184a, #ff2a6d);
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.8rem;
+            line-height: 1.8;
+        }
+
+        .flip-card-back p {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .flip-card-back span {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 0.95rem;
+            direction: ltr;
+        }
+
+        /* =========================================
+           7. ظرف رسالة الحب (بالمصري)
+           ========================================= */
+        .letter-box {
+            max-width: 740px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .toggle-letter {
+            display: none;
+        }
+
+        .open-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--rose-primary), #ff758f);
+            color: #fff;
+            padding: 15px 36px;
+            border-radius: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(255, 42, 109, 0.5);
+            transition: transform 0.3s ease;
+            direction: ltr;
+        }
+
+        .open-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+        }
+
+        .letter-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.85s ease-in-out;
+            background: rgba(255, 255, 255, 0.97);
+            color: #2b0918;
+            border-radius: 24px;
+            margin-top: 1.5rem;
+            padding: 0 2rem;
+            text-align: right;
+            line-height: 2.1;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.65);
+        }
+
+        .toggle-letter:checked ~ .letter-content {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 2.5rem;
+            border: 3px solid var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #ffb3c6;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            direction: ltr;
+        }
+
+        /* =========================================
+           8. تحسين السيمترية والتجاوب على الموبايل
+           ========================================= */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            .badge {
+                font-size: 0.85rem;
+                padding: 6px 18px;
+            }
+
+            .subtitle-ar {
+                padding: 0.9rem 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section {
+                padding: 2.8rem 1rem;
+            }
+
+            /* تظبيط حجم التورتة في نص شاشة الموبايل */
+            .grand-cake-stage {
+                transform: scale(0.86);
+                margin: 0 auto 0.5rem;
+            }
+
+            /* تظبيط حلقة الـ 3D عشان تبقى في نص شاشة الموبايل بالظبط وماتخرجش بره */
+            .carousel-wrapper {
+                width: 170px;
+                height: 210px;
+                margin: 1.5rem auto 3.5rem;
+            }
+
+            .carousel-3d figure {
+                width: 140px;
+                height: 180px;
+                left: 15px;
+                top: 10px;
+            }
+
+            .carousel-3d figure:nth-child(1) { transform: rotateY(0deg) translateZ(165px); }
+            .carousel-3d figure:nth-child(2) { transform: rotateY(60deg) translateZ(165px); }
+            .carousel-3d figure:nth-child(3) { transform: rotateY(120deg) translateZ(165px); }
+            .carousel-3d figure:nth-child(4) { transform: rotateY(180deg) translateZ(165px); }
+            .carousel-3d figure:nth-child(5) { transform: rotateY(240deg) translateZ(165px); }
+            .carousel-3d figure:nth-child(6) { transform: rotateY(300deg) translateZ(165px); }
+
+            /* ضمان سيمترية كروت الصور في نص الموبايل */
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 310px;
+                margin: 0 auto;
+                gap: 1.6rem;
+            }
+
+            .music-card {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .lock-card {
+                padding: 2.2rem 1.4rem;
+            }
+
+            .open-btn {
+                font-size: 1.05rem;
+                padding: 14px 24px;
+                width: 100%;
+                max-width: 310px;
+            }
+
+            .toggle-letter:checked ~ .letter-content {
+                padding: 1.8rem 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. شاشة القفل بكلمة السر 112004 (بدون JavaScript) -->
+    <div class="lock-screen">
+        <div class="lock-card">
+            <div class="lock-icon">🔐❤️</div>
+            <h2>Secret Love Portal</h2>
+            <p>اكتبي الباسورد الخاص بينا عشان تفتحي مفاجأة عيد ميلادك يا ياسمينتي ✨</p>
+            <input type="password" class="pass-input" pattern="112004" inputmode="numeric" required placeholder="Enter Password...">
+            <div class="hint-text">💡 أول ما تكتبي الرقم الصحيح هتفتح المفاجأة فوراً</div>
+        </div>
+    </div>
+
+    <!-- 2. قلوب الخلفية المتحركة -->
+    <div class="floating-hearts">
+        <div class="heart">❤️</div>
+        <div class="heart">💖</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌸</div>
+        <div class="heart">💕</div>
+        <div class="heart">👑</div>
+        <div class="heart">❤️</div>
+    </div>
+
+    <!-- 3. القسم الافتتاحي + التورتة الملكية -->
+    <header>
+        <div class="badge">✨ Special Birthday Celebration ✨</div>
+        <h1>Happy Birthday Yasmin</h1>
+        <div class="hero-sub-en">With All My Love, From Ahmed Ehab ❤️</div>
+
+        <p class="subtitle-ar">
+            كل سنة وإنتي طيبة يا أجمل وأحن حاجة حصلت في حياتي.. النهاردة مش بس عيد ميلادك، ده اليوم اللي الدنيا نورت فيه بوجودك يا ياسمينتي.
+        </p>
+
+        <!-- التورتة الملكية الضخمة المتحركة -->
+        <div class="grand-cake-stage">
+            <div class="cake-aura"></div>
+            <div class="sparkle sp-1">✨</div>
+            <div class="sparkle sp-2">🌟</div>
+            <div class="sparkle sp-3">💖</div>
+            <div class="sparkle sp-4">✨</div>
+
+            <!-- الشموع -->
+            <div class="candles-group">
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+            </div>
+
+            <!-- الدور الثالث (العلوي) -->
+            <div class="tier-3">
+                <div class="frosting">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="pearls"></div>
+            </div>
+
+            <!-- الدور الثاني (الأوسط) -->
+            <div class="tier-2">
+                <div class="frosting">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="cake-name">Yasmin</div>
+                <div class="pearls"></div>
+            </div>
+
+            <!-- الدور الأول (القاعدة) -->
+            <div class="tier-1">
+                <div class="frosting">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="pearls"></div>
+            </div>
+
+            <!-- الحامل الذهبي -->
+            <div class="cake-stand"></div>
+        </div>
+    </header>
+
+    <!-- 4. قسم الأغنية -->
+    <section class="section">
+        <h2 class="section-title">🎵 Our Romantic Melody</h2>
+        <p class="section-desc">شغلي الأغنية بتاعتنا وإنتي بتتفرجي على ذكرياتنا الحلوة</p>
+
+        <div class="music-card">
+            <div class="vinyl">
+                <div class="vinyl-center">❤️</div>
+            </div>
+            <h3 class="en-title" style="color: var(--gold);">Dedicated to Yasmin — By Ahmed Ehab</h3>
+            <audio controls loop>
+                <source src="song.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <!-- 5. حلقة الصور ثلاثية الأبعاد -->
+    <section class="section">
+        <h2 class="section-title">✨ 3D Rotating Memories ✨</h2>
+        <p class="section-desc">المسي أي صورة أو وقفي الماوس عليها عشان تتأملي جمالك</p>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-3d">
+                <figure><img src="images/pic1.jpg" alt="Yasmin 1"></figure>
+                <figure><img src="images/pic2.jpg" alt="Yasmin 2"></figure>
+                <figure><img src="images/pic3.jpg" alt="Yasmin 3"></figure>
+                <figure><img src="images/pic4.jpg" alt="Yasmin 4"></figure>
+                <figure><img src="images/pic5.jpg" alt="Yasmin 5"></figure>
+                <figure><img src="images/pic6.jpg" alt="Yasmin 6"></figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. معرض الـ 12 صورة (العناوين إنجليزي والرسائل بالمصري) -->
+    <section class="section">
+        <h2 class="section-title">📸 Princess Yasmin's Gallery</h2>
+        <p class="section-desc">المسي أي كارت على الموبايل أو اقفي عليه بالماوس عشان تقرأي رسالتي ليكي</p>
+
+        <div class="gallery-grid">
+            <!-- Card 1 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic1.jpg" alt="Yasmin 1">
+                        <div class="caption">Your Magical Smile ❤️</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"ضحكتك دي بالذات بتنسيني الدنيا وما فيها، وبترد فيا الروح من تاني."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic2.jpg" alt="Yasmin 2">
+                        <div class="caption">My Favorite Eyes ✨</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"عيونك دول وطني وأمان قلبي، ومكاني الوحيد اللي برتاح فيه."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic3.jpg" alt="Yasmin 3">
+                        <div class="caption">Queen of My Heart 👑</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"وجودك في حياتي هو أكبر عوض وأجمل هدية ربنا بعتهالي."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic4.jpg" alt="Yasmin 4">
+                        <div class="caption">Unforgettable Moment 🌸</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"كل ثانية بتعدي وأنا معاكي بتساوي عندي عمر كامل من الفرحة."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic5.jpg" alt="Yasmin 5">
+                        <div class="caption">Pure Elegance 🤍</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"واخدة من اسمك كل الرقة والجمال.. يا أحلى ياسمين في الدنيا."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic6.jpg" alt="Yasmin 6">
+                        <div class="caption">Shining Like The Moon 🌙</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"والله القمر نفسه بيغير من جمالك ومن طلتك اللي بتخطف قلبي."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic7.jpg" alt="Yasmin 7">
+                        <div class="caption">Forever Happiness 💖</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"أوعدك أفضل طول عمري سندك وضهرك وحبيبك اللي عمره ما يتغير."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic8.jpg" alt="Yasmin 8">
+                        <div class="caption">Beyond Beautiful 🌷</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"لو بإيدي أكتب اسمك على كل نجمة في السما عشان الكل يعرف قد إيه بحبك."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic9.jpg" alt="Yasmin 9">
+                        <div class="caption">My Dream Partner 💍</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"كل أحلامي للي جاي بتبدأ بيكي وبتكمل بس لما بشوفك مبسوطة."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic10.jpg" alt="Yasmin 10">
+                        <div class="caption">Soulmate Vibes 🦋</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"أول ما بشوفك بحس إن قلبي مطمن وإن الدنيا كلها ضحكتلي."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic11.jpg" alt="Yasmin 11">
+                        <div class="caption">My Heartbeat 💓</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"بحبك النهاردة أكتر من امبارح، وبكرة هحبك أضعاف النهاردة."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="flip-card" tabindex="0">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/pic12.jpg" alt="Yasmin 12">
+                        <div class="caption">Happy Birthday My Love 🎂</div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"كل سنة وإنتي معايا ومنورة حياتي يا أغلى وأحلى نعمة في دنيتي."</p>
+                        <span>— Ahmed Ehab</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. قسم رسالة الحب الكبيرة (بالمصري) -->
+    <section class="section">
+        <div class="letter-box">
+            <input type="checkbox" id="letter-toggle" class="toggle-letter">
+            <label for="letter-toggle" class="open-btn">💌 Open My Secret Love Letter</label>
+
+            <div class="letter-content">
+                <h3 style="color: #c9184a; margin-bottom: 1rem; font-size: 1.5rem;">حبيبتي وبنوتي وأميرتي ياسمين،</h3>
+                <p style="font-size: 1.15rem;">
+                    في يوم عيد ميلادك حبيت أعملك حاجة مختلفة تفضل ذكرى حلوة بينا طول العمر. شكراً من قلبي إنك دخلتي حياتي وخليتيها أجمل وأحن بكتير، وشكراً على كل ضحكة وكل لحظة حلوة عشتها معاكي.
+                    بتمنالك سنة جديدة مليانة فرحة ونجاح وتحققي فيها كل اللي بتتمنيه، ونفضل دايماً مع بعض نحتفل بكل أعياد ميلادك الجاية وإنتي منورة دنيتي.
+                </p>
+                <p style="margin-top: 1.4rem; font-weight: 800; color: #900c3f; font-size: 1.2rem;">
+                    بحبك أوي يا ياسمينتي ❤️<br>
+                    <span class="en-title">Forever Yours, Ahmed Ehab</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Crafted with Endless Love for <strong>Yasmin</strong> by <strong>Ahmed Ehab</strong> ❤️
+    </footer>
+
+</body>
+</html>
